@@ -1,0 +1,13 @@
+#!/bin/bash
+
+SESSION_NAME='Development'
+
+if tmux has-session -t $SESSION_NAME 2>/dev/null; then
+    return
+fi
+
+tmux new-session -d -s $SESSION_NAME
+tmux split-window -v -t $SESSION_NAME:0
+tmux split-window -h -t $SESSION_NAME:0.1
+
+tmux attach -t $SESSION_NAME
