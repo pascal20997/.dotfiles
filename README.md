@@ -22,6 +22,22 @@ git clone https://github.com/pascal20997/.dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 ```
 
+### Install packages (ubuntu)
+
+```bash
+apt update && apt install stow tmux 
+```
+
+#### Install npm & angular-cli
+
+```bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
+
+nvm install --lts
+
+npm i -g @angular/cli
+```
+
 ### Stow Configuration
 
 To install configurations using Stow, navigate to the directory of the dotfile you want to install and run:
@@ -33,9 +49,7 @@ stow <package-name>
 For example, to install `starship`, `tmux`, and `bashrc` configurations, you can run:
 
 ```bash
-stow starship
-stow tmux
-stow bashrc
+stow -v starship tmux bashrc
 ```
 
 ### Bashrc Configuration
