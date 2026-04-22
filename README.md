@@ -46,10 +46,10 @@ To install configurations using Stow, navigate to the directory of the dotfile y
 stow <package-name>
 ```
 
-For example, to install `starship`, `tmux`, and `bashrc` configurations, you can run:
+For example, to install `starship`, `tmux`, `bashrc` and `glazewm` configurations, you can run:
 
 ```bash
-stow -v starship tmux bashrc
+stow -v starship tmux bashrc glazewm
 ```
 
 ### Bashrc Configuration
