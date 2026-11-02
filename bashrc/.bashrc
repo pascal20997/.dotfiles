@@ -131,7 +131,6 @@ eval "$(starship init bash)"
 alias nuget="mono /usr/local/bin/nuget.exe"
 
 # Load Angular CLI autocompletion.
-source <(ng completion script)
-
-# Custom startup
-source ~/.bash_startup
+if command -v ng &> /dev/null; then
+    source <(ng completion script)
+fi
